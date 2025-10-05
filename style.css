@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #181824;           /* Deep navy */
+    color: #f8fafc;                      /* Near-white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 99vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+#main-container {
+    width: 55rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6.25rem 0 0.625rem 0; /* 100px 0px 10px 0px */
+}
+
+.msg-container {
+    margin-bottom: 1.25rem; /* 20px */
+    padding: 0.625rem;      /* 10px */
+    position: absolute;
+    top: 6rem;
+    width: 55em;
+}
+
+#msg {
+    font-size: 2.5rem;      /* 40px */
+    font-weight: bold;
+    color: #ffe066;         /* Soft yellow for visibility */
+}
+
+#newGame-btn {
+    padding: 0.3125rem;     /* 5px */
+    border-radius: 0.5625rem; /* 9px */
+    width: 8.75rem;         /* 140px */
+    height: 2.3125rem;      /* 37px */
+    font-size: 1.25rem;     /* 20px */
+    margin-top: 1.875rem;   /* 30px */
+    font-weight: 600;
+    color: #181824;         /* Deep navy text */
+    background-color: #ffe066; /* Soft yellow */
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+#heading {
+    color: #7ee787;         /* Vibrant green accent */
+    font-size: 2.5rem;      /* 40px */
+    font-weight: 600;
+}
+
+#game-container {
+    width: 28.125rem;       /* 450px */
+    padding: 1.75rem 0;     /* 28px 0px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 0.5625rem;         /* 9px */
+    background-color: #232946; /* Slightly lighter navy */
+    border-radius: 0.625rem;   /* 10px */
+    margin: 1.25rem 0 0.625rem 0; /* 20px 0px 10px 0px */
+    box-shadow: 0 0.25rem 1.5rem rgba(30, 41, 59, 0.15); /* 0 4px 24px */
+}
+
+.box {
+    width: 7.5rem;          /* 120px */
+    height: 7.5rem;         /* 120px */
+    border-radius: 0.625rem; /* 10px */
+    background-color: #f4f4f9; /* Soft off-white */
+    cursor: pointer;
+    font-size: 4.375rem;    /* 70px */
+    font-family: cursive;
+    color: #232946;         /* Navy for X/O */
+    border: 0.125rem solid #7ee787; /* 2px */
+    transition: background 0.2s, color 0.2s;
+}
+
+#reset-btn {
+    padding: 0.3125rem;     /* 5px */
+    border-radius: 0.5625rem; /* 9px */
+    width: 8.75rem;         /* 140px */
+    height: 2.3125rem;      /* 37px */
+    font-size: 1.25rem;     /* 20px */
+    margin-top: 1.875rem;   /* 30px */
+    font-weight: 600;
+    color: #181824;         /* Deep navy text */
+    background-color: #ffe066; /* Soft yellow */
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.box:hover {
+    background-color: #e0e7ff;   /* Light blue on hover */
+    color: #7ee787;              /* Green accent for X/O on hover */
+}
+
+#newGame-btn:hover, #reset-btn:hover {
+    background-color: #7ee787;   /* Vibrant green */
+    color: #181824;              /* Deep navy text */
+}
+
+
+
+/* Responsive styles for tablets and below */
+@media (max-width: 900px) {
+    #main-container {
+        width: 95vw;
+        padding: 2rem 0 1rem 0;
+    }
+    .msg-container {
+        width: 95vw;
+        top: 2rem;
+        padding: 0.5rem;
+    }
+    #game-container {
+        width: 95vw;
+        min-width: 0;
+        padding: 1rem 0;
+        gap: 0.5rem;
+    }
+    .box {
+        width: 5.5rem;
+        height: 5.5rem;
+        font-size: 2.5rem;
+    }
+    #msg, #heading {
+        font-size: 2rem;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 600px) {
+    #main-container {
+        width: 100vw;
+        padding: 1rem 0 0.5rem 0;
+    }
+    .msg-container {
+        width: 100vw;
+        top: 1rem;
+        padding: 0.25rem;
+    }
+    #game-container {
+        width: 100vw;
+        padding: 0.5rem 0;
+        gap: 0.3rem;
+    }
+    .box {
+        width: 2.8rem;
+        height: 2.8rem;
+        font-size: 1.5rem;
+    }
+    #msg, #heading {
+        font-size: 1.2rem;
+    }
+    #reset-btn, #newGame-btn {
+        width: 6rem;
+        height: 2rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+}
